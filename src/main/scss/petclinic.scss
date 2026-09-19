@@ -15,59 +15,60 @@
 
 $icon-font-path:    "../../webjars/bootstrap/fonts/";
 
-$spring-green:      #6db33f;
-$spring-dark-green: #5fa134;
-$spring-brown:      #34302D;
-$spring-grey:       #838789;
-$spring-light-grey: #f1f1f1;
+$brand-teal:        #0f766e;
+$brand-dark-teal:   #0b5c56;
+$brand-slate:       #1e293b;
+$brand-grey:        #7a8a93;
+$brand-light-grey:  #f3f6f5;
+$brand-amber:       #f59e0b;
 
-$body-bg:                           $spring-light-grey;
-$text-color:                        $spring-brown;
-$link-color:                        $spring-dark-green;
-$link-hover-color:                  $spring-dark-green;
+$body-bg:                           $brand-light-grey;
+$text-color:                        $brand-slate;
+$link-color:                        $brand-dark-teal;
+$link-hover-color:                  $brand-amber;
 
-$navbar-default-link-color:         $spring-light-grey;
-$navbar-default-link-active-color:  $spring-light-grey;
-$navbar-default-link-hover-color:   $spring-light-grey;
-$navbar-default-link-hover-bg:      $spring-green;
-$navbar-default-toggle-icon-bar-bg: $spring-light-grey;
+$navbar-default-link-color:         $brand-light-grey;
+$navbar-default-link-active-color:  $brand-light-grey;
+$navbar-default-link-hover-color:   $brand-light-grey;
+$navbar-default-link-hover-bg:      $brand-teal;
+$navbar-default-toggle-icon-bar-bg: $brand-light-grey;
 $navbar-default-toggle-hover-bg:    transparent;
-$navbar-default-link-active-bg:     $spring-green;
+$navbar-default-link-active-bg:     $brand-teal;
 
-$border-radius-base:             0;
-$border-radius-large:            0;
-$border-radius-small:            0;
+$border-radius-base:             4px;
+$border-radius-large:            4px;
+$border-radius-small:            4px;
 
-$nav-tabs-active-link-hover-color:        $spring-light-grey;
-$nav-tabs-active-link-hover-bg:           $spring-brown;
-$nav-tabs-active-link-hover-border-color: $spring-brown;
-$nav-tabs-border-color:                   $spring-brown;
+$nav-tabs-active-link-hover-color:        $brand-light-grey;
+$nav-tabs-active-link-hover-bg:           $brand-slate;
+$nav-tabs-active-link-hover-border-color: $brand-slate;
+$nav-tabs-border-color:                   $brand-slate;
 
-$pagination-active-bg:                    $spring-brown;
-$pagination-active-border:                $spring-green;
-$table-border-color:                      $spring-brown;
+$pagination-active-bg:                    $brand-slate;
+$pagination-active-border:                $brand-teal;
+$table-border-color:                      $brand-slate;
 
 .table > thead > tr > th {
-  background-color: lighten($spring-brown, 3%);
-  color: $spring-light-grey;
+  background-color: lighten($brand-slate, 3%);
+  color: $brand-light-grey;
 }
 
 .table-filter {
-  background-color: $spring-brown;
+  background-color: $brand-slate;
   padding: 9px 12px;
 }
 
 .nav > li > a {
-  color: $spring-grey;
+  color: $brand-grey;
 }
 
 .btn-primary {
   margin-top: 12px;
   border-width: 2px;
   transition: border 0.15s;
-  color: $spring-light-grey;
-  background: $spring-brown;
-  border-color: $spring-green;
+  color: $brand-light-grey;
+  background: $brand-teal;
+  border-color: $brand-amber;
   -webkit-transition: border 0.15s;
   -moz-transition: border 0.15s;
   -o-transition: border 0.15s;
@@ -78,8 +79,8 @@ $table-border-color:                      $spring-brown;
   &:active,
   &.active,
   .open .dropdown-toggle {
-    background-color: $spring-brown;
-    border-color: $spring-brown;
+    background-color: $brand-dark-teal;
+    border-color: $brand-dark-teal;
   }
 }
 
@@ -127,8 +128,8 @@ h1 {
 }
 
 .splash {
-  background: $spring-green;
-  color: $spring-brown;
+  background: $brand-teal;
+  color: $brand-slate;
   display: none;
 }
 
@@ -180,12 +181,12 @@ table td.action-column {
 }
 
 .container-details-table th {
-  background-color: lighten($spring-brown, 3%);
-  color: $spring-light-grey;
+  background-color: lighten($brand-slate, 3%);
+  color: $brand-light-grey;
 }
 
 .status-help-content-table td {
-  color: $spring-brown;
+  color: $brand-slate;
 }
 
 .logo {
@@ -206,7 +207,7 @@ table td.action-column {
 }
 
 hr {
-  border-top: 1px dotted $spring-brown;
+  border-top: 1px dotted $brand-slate;
 }
 
 @import "typography.scss";
