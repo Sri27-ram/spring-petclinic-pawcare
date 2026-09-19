@@ -8,11 +8,12 @@
     <version>4.1.0</version>
   </parent>
 
-  <groupId>org.springframework.samples</groupId>
-  <artifactId>spring-petclinic</artifactId>
-  <version>4.0.0-SNAPSHOT</version>
+  <groupId>com.pawcareclinic</groupId>
+  <artifactId>pawcare-clinic</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
 
-  <name>petclinic</name>
+  <name>pawcare-clinic</name>
+  <description>PawCare Clinic veterinary practice management application</description>
 
   <properties>
     <!-- Generic properties -->

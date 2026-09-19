@@ -11,8 +11,8 @@ plugins {
 
 gradle.startParameter.excludedTaskNames += [ "checkFormatAot", "checkFormatAotTest" ]
 
-group = 'org.springframework.samples'
-version = '4.0.0-SNAPSHOT'
+group = 'com.pawcareclinic'
+version = '1.0.0-SNAPSHOT'
 
 java {
   toolchain {
