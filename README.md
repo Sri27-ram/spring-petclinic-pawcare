@@ -42,8 +42,8 @@ There is no `Dockerfile` in this project. You can build a container image (if yo
 ## Running the Container Image
 
 ```bash
-docker images | grep petclinic
-docker run -p 8080:8080 docker.io/library/spring-petclinic:latest
+docker images | grep pawcare-clinic
+docker run -p 8080:8080 docker.io/library/pawcare-clinic:latest
 ```
 
 ## Database configuration
@@ -57,17 +57,17 @@ A similar setup is provided for MySQL and PostgreSQL if a persistent database co
 You can start MySQL or PostgreSQL locally with whatever installer works for your OS or use docker:
 
 ```bash
-docker run -e MYSQL_USER=petclinic -e MYSQL_PASSWORD=petclinic -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=petclinic -p 3306:3306 mysql:9.7
+docker run -e MYSQL_USER=pawcareclinic -e MYSQL_PASSWORD=pawcareclinic -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=pawcareclinic -p 3306:3306 mysql:9.7
 ```
 
 or
 
 ```bash
-docker run -e POSTGRES_USER=petclinic -e POSTGRES_PASSWORD=petclinic -e POSTGRES_DB=petclinic -p 5432:5432 postgres:18.4
+docker run -e POSTGRES_USER=pawcareclinic -e POSTGRES_PASSWORD=pawcareclinic -e POSTGRES_DB=pawcareclinic -p 5432:5432 postgres:18.4
 ```
 
-Further documentation is provided for [MySQL](src/main/resources/db/mysql/petclinic_db_setup_mysql.txt)
-and [PostgreSQL](src/main/resources/db/postgres/petclinic_db_setup_postgres.txt).
+Further documentation is provided for [MySQL](src/main/resources/db/mysql/pawcareclinic_db_setup_mysql.txt)
+and [PostgreSQL](src/main/resources/db/postgres/pawcareclinic_db_setup_postgres.txt).
 
 Instead of vanilla `docker` you can also use the provided `docker-compose.yml` file to start the database containers. Each one has a service named after the Spring profile:
 
@@ -83,11 +83,11 @@ docker compose up postgres
 
 ## Test Applications
 
-At development time we recommend you use the test applications set up as `main()` methods in `PetClinicIntegrationTests` (using the default H2 database and also adding Spring Boot Devtools), `MySqlTestApplication` and `PostgresIntegrationTests`. These are set up so that you can run the apps in your IDE to get fast feedback and also run the same classes as integration tests against the respective database. The MySql integration tests use Testcontainers to start the database in a Docker container, and the Postgres tests use Docker Compose to do the same thing.
+At development time we recommend you use the test applications set up as `main()` methods in `PawcareClinicIntegrationTests` (using the default H2 database and also adding Spring Boot Devtools), `MySqlTestApplication` and `PostgresIntegrationTests`. These are set up so that you can run the apps in your IDE to get fast feedback and also run the same classes as integration tests against the respective database. The MySql integration tests use Testcontainers to start the database in a Docker container, and the Postgres tests use Docker Compose to do the same thing.
 
 ## Compiling the CSS
 
-There is a `petclinic.css` in `src/main/resources/static/resources/css`. It was generated from the `petclinic.scss` source, combined with the [Bootstrap](https://getbootstrap.com/) library. If you make changes to the `scss`, you will need to re-compile the CSS resources using the Maven profile "css", i.e. `./mvnw generate-resources -P css`. There is no build profile for Gradle to compile the CSS.
+There is a `pawcareclinic.css` in `src/main/resources/static/resources/css`. It was generated from the `pawcareclinic.scss` source, combined with the [Bootstrap](https://getbootstrap.com/) library. If you make changes to the `scss`, you will need to re-compile the CSS resources using the Maven profile "css", i.e. `./mvnw generate-resources -P css`. There is no build profile for Gradle to compile the CSS.
 
 ## Working with PawCare Clinic in your IDE
 
@@ -124,7 +124,7 @@ The following items should be installed in your system:
 
     - CSS files are generated from the Maven build. You can build them on the command line `./mvnw generate-resources -P css` or right-click on the project then `Maven -> Generates sources and Update Folders`.
 
-    - Run the application by right-clicking on the `PetClinicApplication` main class and choosing `Run 'PetClinicApplication'`.
+    - Run the application by right-clicking on the `PawcareClinicApplication` main class and choosing `Run 'PawcareClinicApplication'`.
 
 1. Navigate to PawCare Clinic
 
@@ -134,13 +134,9 @@ The following items should be installed in your system:
 
 |Spring Boot Configuration | Class or Java property files  |
 |--------------------------|---|
-|The Main Class | [PetClinicApplication](src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java) |
+|The Main Class | [PawcareClinicApplication](src/main/java/com/pawcareclinic/PawcareClinicApplication.java) |
 |Properties Files | [application.properties](src/main/resources) |
-|Caching | [CacheConfiguration](src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java) |
-
-## About this project
-
-PawCare Clinic started as a rebrand of the [Spring PetClinic](https://github.com/spring-projects/spring-petclinic) sample application, restyled with its own name, color palette, and branding on top of the same Spring Boot / Thymeleaf foundation.
+|Caching | [CacheConfiguration](src/main/java/com/pawcareclinic/system/CacheConfiguration.java) |
 
 ## License
 
