@@ -9,9 +9,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" th:href="@{/resources/images/favicon.png}">
-  <title th:text="#{layoutTitle}">PetClinic :: a Spring Framework demonstration</title>
+  <title th:text="#{layoutTitle}">PawCare Clinic :: caring for your pets</title>
   <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
-  <link rel="stylesheet" th:href="@{/resources/css/petclinic.css}" />
+  <link rel="stylesheet" th:href="@{/resources/css/pawcareclinic.css}" />
 
 </head>
 
@@ -21,7 +21,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" th:href="@{/}">
         <span class="fa fa-paw" aria-hidden="true"></span>
-        <span class="navbar-brand-text">PawCare Clinic</span>
+        <span class="navbar-brand-text" th:text="#{brandName}">PawCare Clinic</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar">
         <span class="navbar-toggler-icon"></span>
@@ -78,7 +78,7 @@
           <div class="col-12 text-center">
             <p class="footer-tagline">
               <span class="fa fa-paw" aria-hidden="true"></span>
-              PawCare Clinic &mdash; caring for your pets
+              <span th:text="#{footerTagline}">PawCare Clinic &mdash; caring for your pets</span>
             </p>
           </div>
         </div>
