@@ -9,7 +9,7 @@ stringData:
   provider: "postgresql"
   host: "demo-db"
   port: "5432"
-  database: "petclinic"
+  database: "pawcareclinic"
   username: "user"
   password: "pass"
 
